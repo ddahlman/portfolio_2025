@@ -17,18 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${grotesk.variable} font-sans`}
+      className={`${inter.variable} ${grotesk.variable} font-sans box-border`}
     >
-      <body className="min-h-screen text-gray-100 bg-neon">
+      <body className="grid min-h-dvh grid-rows-[auto,1fr,auto] items-start text-gray-100 bg-neon">
         <header className="sticky top-0 z-50 bg-black/10 backdrop-blur">
-          <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-            <Link
-              href="/"
-              className="font-semibold tracking-tight text-white font-display"
-            >
-              Daniel Acuña Dahlman
-            </Link>
-            <div className="flex gap-6 text-sm">
+          <nav className="mx-auto max-w-6xl px-4 py-3">
+            <div className="flex justify-between text-base w-1/2">
               <Link href="/" className="hover:text-fuchsia-300 font-display">
                 Home
               </Link>
@@ -51,7 +45,7 @@ export default function RootLayout({ children }) {
         <main className="mx-auto max-w-6xl px-4 py-12">{children}</main>
 
         <footer className="py-6 text-center text-sm text-white/60">
-          © {new Date().getFullYear()} Daniel Dahlman
+          © {new Date().getFullYear()} Daniel Acuña Dahlman
         </footer>
       </body>
     </html>
