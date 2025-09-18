@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { NavLink } from "./shared/NavLink";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -23,21 +24,9 @@ export default function RootLayout({ children }) {
         <header className="sticky top-0 z-50 bg-black/10 backdrop-blur">
           <nav className="mx-auto max-w-6xl px-4 py-3">
             <div className="flex justify-between text-base w-1/2">
-              <Link href="/" className="hover:text-fuchsia-300 font-display">
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="hover:text-fuchsia-300 font-display"
-              >
-                About
-              </Link>
-              <Link
-                href="/projects"
-                className="hover:text-fuchsia-300 font-display"
-              >
-                Portfolio
-              </Link>
+              <NavLink nav="Home" href={"/"} />
+              <NavLink nav="About" href={"/about"} />
+              <NavLink nav="Projects" href={"/projects"} />
             </div>
           </nav>
         </header>

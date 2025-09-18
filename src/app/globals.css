@@ -12,3 +12,27 @@
 @utility bg-neon {
   background: radial-gradient(circle at top right, #280933, #09020d);
 }
+
+/* ------------------------------------------------------------------- */
+/* NavLink styles */
+/* ------------------------------------------------------------------- */
+
+.nav-stroke {
+  stroke: currentColor;
+}
+
+.nav-stroke [data-nav-icon] {
+  stroke-dasharray: var(--dash, 999);
+  stroke-dashoffset: var(--dash, 999);
+  transition: stroke-dashoffset 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link-group:hover .nav-stroke [data-nav-icon],
+.link-group:focus-visible .nav-stroke [data-nav-icon] {
+  stroke-dashoffset: 0;
+}
+
+.link-group:hover .nav-stroke,
+.link-group:focus-visible .nav-stroke {
+  filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6));
+}
