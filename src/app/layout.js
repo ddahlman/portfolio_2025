@@ -18,15 +18,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${grotesk.variable} font-sans box-border`}
+      className={`${inter.variable} ${grotesk.variable} font-sans box-border scroll-smooth`}
     >
       <body className="grid min-h-dvh grid-rows-[auto,1fr,auto] items-start text-gray-100 bg-neon">
         <header className="sticky top-0 z-50 bg-black/10 backdrop-blur">
           <nav className="mx-auto max-w-6xl px-4 py-3">
             <div className="flex justify-between text-base w-1/2">
-              <NavLink nav="Home" href={"/"} />
-              <NavLink nav="About" href={"/about"} />
-              <NavLink nav="Projects" href={"/projects"} />
+              <NavLink nav="Home" href="/#top" />
+              <NavLink nav="About" href="/#about" />
+              <NavLink nav="Projects" href="/#projects" />
             </div>
           </nav>
         </header>

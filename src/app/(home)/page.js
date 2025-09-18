@@ -1,23 +1,19 @@
-import { NeonIcon } from "@/app/shared/NeonIcon";
-import { Braces, Brackets, Code } from "lucide-react";
+import Home from "@/app/home/Home";
+import About from "@/app/about/About";
+import Projects from "@/app/projects/Projects";
 
-export default function Home() {
+export default function Init() {
   return (
-    <section className="flex justify-between">
-      <div>
-        <h1 className="font-display text-9xl font-bold mb-6">
-          Hi, I&apos;m a Swedish Frontend developer
-        </h1>
-        <p className="text-3xl">
-          I build fast, accessible, and visually polished web apps with clean
-          code, using React, Vue, and modern frontend tools.
-        </p>
-      </div>
-      <div>
-        <NeonIcon Icon={Braces} size={200} strokeWidth={1} />
-        <NeonIcon Icon={Brackets} size={200} strokeWidth={1} />
-        <NeonIcon Icon={Code} size={200} strokeWidth={1} />
-      </div>
-    </section>
+    <>
+      <section id="top" className="scroll-mt-16">
+        <Home />
+      </section>
+      <section id="about" className="scroll-mt-16">
+        <About />
+      </section>
+      <section id="projects" className="scroll-mt-16">
+        <Projects />
+      </section>
+    </>
   );
 }
